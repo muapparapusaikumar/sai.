@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       
+        .main{
+            width: 100%;
+            height:120vh;
+            
+            background-position: center;
+            background-size: cover;
+        }
+        .navbar{
+            width: 1200px;
+            height: 75px;
+            margin: auto;
+        }
+        .main .navbar{
+            padding: 10px;
+        }
+        .icon{
+            width: 200px;
+            height: 70px;
+            float: left;
+        }
+        .logo{
+            color: blue;
+            font-size: 35px;
+            font-family: Arial;
+            padding-left:20px;
+            padding-top: 10px;
+            float: left;
+        }
+        .menu{
+            width: 400px;
+            height: 70px;
+            float: left;
+            color:blue;
+        
+            
+        }
+
+        ul{
+            float: left;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        ul li{
+            list-style: none;
+            margin-right:100px;
+            margin-top: 35px;
+            font-size: 14px;
+            
+        }
+        ul li a{
+            text-decoration: none;
+            color: #070606;
+            font-family: arial;
+            font-weight: bold;
+            transition: 0.4s ease-in-out;
+            word-wrap: initial
+            
+        }
+        ul li a:hover{
+            color:#ff7200;
+        }
+        .search{
+            width: 330px;
+            float: right;
+            margin-right:-210px;
+            
+        }
+        .srch{
+            width: 200px;
+            height: 40px;
+            border: 1px solid #ff7200;
+            background:transparent ;
+            color: #fff;
+            font-family: 'Times New Roman';
+            margin: 13px 0px 0px 0px;
+            border-right:none;
+            font-size: 16px;
+            float:left;
+            
+            padding: 10px;
+            border-bottom-left-radius:5px;
+            border-top-left-radius:5px ;
+        }
+        .btn{
+            width: 100px;
+            height: 40px;
+            border: 2px solid #ff7200;
+            background:blue;
+            color: #fff;
+            margin: 13px;
+            border-bottom-right-radius: 5px ;
+            border-bottom-right-radius:5px;
+            font-size: 15px;
+        }
+        .btn:focus{
+            outline: none;
+        }
+        .srch:focus{
+            outline: none;
+        }
+        .content{
+            width: 1200px;
+            height: auto;
+            margin: auto;
+            color: #fff;
+            position: relative;
+        }
+
+        .content.h1{
+            font-family: 'Times New Roman';
+            font-size: 50px;
+            padding-left:20px;
+            margin: 9%;
+            letter-spacing:2px;
+        }
+       
+       
+        .content.cn a{
+            text-decoration: none;
+            color:#000
+        
+        }
+        .cn:hover{
+            background-color: #fff;
+        }
+        .content span{
+            color: #ff7200;
+            font-size: 60px;
+        }
+        .form{
+            width: 455px;
+            height: 540px;
+            
+            background: black; 
+            position: absolute;
+            top: 120px;
+            left: 975px;
+    
+            
+            border-radius: 10px; 
+            padding: 25px;
+        }
+        .form h2{
+            width: 420px;
+            font-family: sans-serif;
+            text-align: center;
+            color: #ff7200;
+            font-size: 36px;
+            background-color: #fff;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 8px;
+            
+        }
+        .form input{
+            width: 350px;
+            height: 40px;
+            background: transparent;
+            border-bottom: 1px solid #ff7200;
+            border-right: none;
+            border-top: none;
+            border-left: none;
+            padding: 0px 0px 0px 10px;
+            color: #fff;
+            font-size: 20px;
+            letter-spacing: 1px;
+            margin-top: 30px;
+            font-family: sans-serif;
+        }
+        .form input:focus{
+            outline: none;
+        }
+        ::placeholder{
+            color: #fff;
+            font-family: arial;
+        }
+        .btnn{
+            width: 435px;
+            height: 60px;
+            margin: 10px;
+            padding: 8px;
+            background: blue;
+            margin-top: 30px;
+            border: none;
+            font-size: 36px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #fff;
+            transition: 0.4s ease;
+            
+        }
+        .btnn:hover{
+            background: #fff;
+            color: #ff7200;
+        }
+        .btnn a{
+            text-decoration: none;
+            color: #000;
+            font-weight: bold;
+        }
+        .form.link{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 50px;
+            padding-top: 20px;
+            text-align: center;
+        }
+        #link {
+            height: 25px;
+            width: 455px;
+            font-size: 20px;
+            text-align: center;
+            
+        }
+        #link a{
+            text-decoration: none;
+            color: #ff7200;
+        }
+        .form.link a{
+            text-decoration: none;
+            color:#ff7200
+        }
+        .liw{
+            padding-bottom: 10px;
+            padding-top: 15px;
+            text-align: center;
+        }
+        .icons a{
+            text-decoration: none;
+            color: #fff;
+        }
+        .icons img{
+            color: #fff;
+            font-size: 30px;
+            padding-left: 14px;
+            padding-top: 5px;
+            transition: 0.35 ease;
+            float: inline-end;
+            background-color: transparent;
+        }
+        .icons img:hover{
+            color: #ff7200;
+
+        }
+        .icons img{
+            height: 50px;
+            width: 50px;
+            
+             
+        }
+        .icons{
+            align-items: center;
+            padding-top: 70px;
+            padding-left: 55px;
+
+        }
+         
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo"></h2><img src="logo1.jpg"alt=""height="100px"width="auto">
+            </div>
+            <div class="menu">
+              <nav>
+                  <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="placement cell.html">PLACEMENTCELL</a></li>
+                    <li><a href="pressmeet.html">PRESSMEET</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+            </div>
+            <div class="search">
+                <input class="srch"type="search"name=""placeholder="type to text " style="text-align: right;" >
+                <a href="#"><button class="btn">search</button></a>
+            </div>
+
+            
+
+        </div>
+        
+        <div class="content">
+            <h1 style="color: blue;"><br><br><br><q>IT HUB is Government Initiative, empowers the skill<br> development for the rural graduate students , <br>especially for women graduates and generation of employment</q> </h4>
+            <p class="par"><p style="color: #000;"><br><br></p></p>
+            <button class="cn"><a href="#"><br><br>JOIN US</a></button>
+            
+
+
+
+
+            <div class="form">
+                <h2>login Here</h2>
+                <input type="email"name="email"placeholder="Enter Email Here">
+                <input type="Password"name=""placeholder="Enter Password Here" id="pass">
+                <button class="btnn"><a href="#"onclick="validate()">login</a></button>
+                <p id="link">Don't have an Acconut?<br>
+                    <a href="signup.html">sign up </a>Here</p>
+                    <p class="liw"log in with></p>
+                    <div class="icons">
+                        <a href="#"><img src="facebook.png" alt=""><ion-icon name="logo-facebook"></ion-icon></a>
+                        <a href="#"><img src="twitter.png" alt=""><ion-icon name="logo-instagram"></ion-icon></a>
+                        <a href="#"><img src="instagram.png" alt=""><ion-icon name="logo-twitter"></ion-icon></a>
+                        <a href="#"><img src="google.png" alt=""><ion-icon name="logo-google"></ion-icon></a>
+                        <a href="#"><img src="skype.png" alt=""><ion-icon name="logo-skype"></ion-icon></a>
+
+                    </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        function myfunction(){
+        var  x=document.getElementById("pass");
+
+        if(x.type === "password"){
+          x.type = "text";
+        }
+        else{
+            x.type="password";
+        }
+    }
+
+    function validate(){
+        var password=document.getElementById("pass");
+        var length=document.getElementById("length");
+         
+        if(password.value.length >= 8){
+            alert("login successful");
+            window.location.replace("newpage.html");
+            return flase;
+        }
+        else{
+            alert("Login failed");
+        }
+    }
+ 
+    </script>
+    
+    
+</body>
+</html>
